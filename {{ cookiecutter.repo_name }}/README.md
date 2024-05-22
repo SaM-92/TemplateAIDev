@@ -32,7 +32,7 @@ then go into ``docs`` folder via doing ``cd  .\docs\`` then do this:
 ``mkdocs serve``
 
 ## Project structure
-
+```
 The directory structure of the project looks like this:
 
 ├── Makefile             <- Makefile with convenience commands like `make data` or `make train`
@@ -74,3 +74,4 @@ The directory structure of the project looks like this:
 │   │   └── visualize.py
 │
 └── LICENSE              <- Open-source license if one is chosen
+```
