@@ -40,15 +40,12 @@ The directory structure of the project looks like this:
 ├── README.md                    <- The top-level README for developers using this project
 ├── LICENSE                      <- Open-source license if one is chosen
 ├── .gitignore                   <- Git ignore file for ignoring unnecessary files in version control
-├── .env                         <- Environment file for setting environment variables
 │
 ├── config                       <- Configuration files for the project
-│   ├── config.yaml              <- Main configuration file
+│   ├── development.env          <- Environment file for setting environment variables
 │   └── logging.conf             <- Logging configuration
 │
-├── inputs                       <- Folder for storing raw and processed data
-│   ├── raw/                     <- Raw data files
-│   └── processed/               <- Processed data files
+├── inputs                       <- Folder for storing input files
 │
 ├── docs                         <- Documentation folder
 │   ├── index.md                 <- Homepage for your documentation
