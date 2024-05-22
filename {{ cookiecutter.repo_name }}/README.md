@@ -1,4 +1,4 @@
-# }
+# {{cookiecutter.project_name}}
 
 {{cookiecutter.description}}
 
@@ -35,43 +35,67 @@ then go into ``docs`` folder via doing ``cd  .\docs\`` then do this:
 ```
 The directory structure of the project looks like this:
 
-├── Makefile             <- Makefile with convenience commands like `make data` or `make train`
-├── README.md            <- The top-level README for developers using this project.
-├── docs                 <- Documentation folder
+
+├── Makefile                     <- Makefile with convenience commands like `make data` or `make train`
+├── README.md                    <- The top-level README for developers using this project
+├── LICENSE                      <- Open-source license if one is chosen
+├── .gitignore                   <- Git ignore file for ignoring unnecessary files in version control
+├── .env                         <- Environment file for setting environment variables
+│
+├── config                       <- Configuration files for the project
+│   ├── config.yaml              <- Main configuration file
+│   └── logging.conf             <- Logging configuration
+│
+├── inputs                       <- Folder for storing raw and processed data
+│   ├── raw/                     <- Raw data files
+│   └── processed/               <- Processed data files
+│
+├── docs                         <- Documentation folder
+│   ├── index.md                 <- Homepage for your documentation
+│   ├── mkdocs.yml               <- Configuration file for mkdocs
+│   └── source/                  <- Source directory for documentation files
+│
+├── models                       <- Folder for storing trained models (if any)
+│
+├── notebooks                    <- Jupyter notebooks
+│
+├── pyproject.toml               <- Project configuration file
+│
+├── requirements.txt             <- The requirements file for reproducing the analysis environment
+├── requirements_dev.txt         <- The requirements file for setting up the development environment
+│
+├── reports                      <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures                  <- Generated graphics and figures to be used in reporting
+│
+│
+├── src                          <- Source code for use in this project
+│   ├── __init__.py              <- Makes folder a Python module
 │   │
-│   ├── index.md         <- Homepage for your documentation
-│   │
-│   ├── mkdocs.yml       <- Configuration file for mkdocs
-│   │
-│   └── source/          <- Source directory for documentation files
-│
-├── models               <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks            <- Jupyter notebooks.
-│
-├── pyproject.toml       <- Project configuration file
-│
-├── reports              <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures          <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt     <- The requirements file for reproducing the analysis environment
- ├── requirements_dev.txt <- The requirements file for reproducing the analysis environment
-│
-├── src  <- Source code for use in this project.
-│   │
-│   ├── __init__.py      <- Makes folder a Python module
-│   │
-│   ├── data             <- Scripts to download or generate data
+│   ├── agents                   <- Directory for different agents
 │   │   ├── __init__.py
-│   │   └── make_dataset.py
+│   │   ├── agent_1.py           <- Agent 1  implementation
+│   │   ├── agent_2.py           <- Agent 2  implementation
+│   │   ├── agent_3.py           <- Agent 3  implementation
+│   │  
 │   │
-│   ├── models           <- model implementations, training script and prediction script
+│   ├── prompts                  <- Directory for prompt scripts
 │   │   ├── __init__.py
-│   │   ├── predict_model.py
-│   │   ├── forecast_model.py
-│   ├── visualization    <- Scripts to create exploratory and results oriented visualizations
-│   │   ├──__init__.py
-│   │   └── visualize.py
-│
-└── LICENSE              <- Open-source license if one is chosen
+│   │   └── prompt_template.py   <- Example prompt script
+│   │
+│   ├── app                      <- Application directory
+│   │   ├── streamlit_app        <- Streamlit application scripts
+│   │   │   ├── __init__.py
+│   │   │   ├── home.py          <- Homepage for Streamlit app
+│   │   │   └── task_specific.py <- Task-specific Streamlit page
+│   │   └── telegram_bot         <- Telegram bot scripts
+│   │       ├── __init__.py
+│   │       ├── bot_main.py      <- Main script for Telegram bot
+│   │       └── menu_handler.py  <- Script for handling bot menus
+│   │
+│   │
+│   └── visualisation            <- Scripts to create exploratory and results oriented visualisations
+│       ├── __init__.py
+│       └── visualise.py
+
+
 ```
