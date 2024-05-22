@@ -1,0 +1,15 @@
+# Main requirements
+pandas
+numpy
+scikit-learn
+matplotlib
+
+# Development
+pre-commit 
+pytest 
+ruff 
+mkdocs 
+mkdocs-material
+mkdocstrings
+mkdocstrings-python
+mkdocs-material
