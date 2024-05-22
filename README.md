@@ -109,8 +109,3 @@ The directory structure of your new project looks like this:
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
-### Installing development requirements
-
----
-
-    pip install -r requirements.txt
