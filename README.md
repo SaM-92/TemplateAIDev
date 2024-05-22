@@ -20,7 +20,7 @@ $ conda install cookiecutter
 
 ---
 
- `` cookiecutter  https://azdev.iesve.com/Integrated%20Environmental%20Solutions/PIT/_git/code_template_for_pi``
+ `` cookiecutter  https://github.com/SaM-92/code_template_cookiecutter/``
 
 Then specify the required names. 
 
