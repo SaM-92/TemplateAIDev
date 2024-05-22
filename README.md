@@ -1,6 +1,6 @@
-# An up-to-date Cookiecutter template for PI Team
+# AI-Enabled Software Systems Cookiecutter Template
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+_A logical, standardized, and flexible project structure designed for developing and sharing AI, data science, and LLM (Language Model) projects._
 
 #### Requirements to use the cookiecutter template:
 
