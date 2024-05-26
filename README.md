@@ -63,46 +63,64 @@ then go into ``docs`` folder via doing ``cd  .\docs\`` then do this:
 The directory structure of your new project looks like this:
 
 ```
-├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+├── Makefile                     <- Makefile with convenience commands like `make data` or `make train`
+├── README.md                    <- The top-level README for developers using this project
+├── LICENSE                      <- Open-source license if one is chosen
+├── .gitignore                   <- Git ignore file for ignoring unnecessary files in version control
 │
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+├── config                       <- Configuration files for the project
+│   ├── development.env          <- Environment file for setting environment variables
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── inputs                       <- Folder for storing input files
 │
-├── notebooks          <- Jupyter notebooks. 
+├── docs                         <- Documentation folder
+│   ├── index.md                 <- Homepage for your documentation
+│   ├── mkdocs.yml               <- Configuration file for mkdocs
+│   └── source/                  <- Source directory for documentation files
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── models                       <- Folder for storing trained models (if any)
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+├── notebooks                    <- Jupyter notebooks
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment
-│                      
+├── pyproject.toml               <- Project configuration file
 │
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
+├── requirements.txt             <- The requirements file for reproducing the analysis environment
+├── requirements_dev.txt         <- The requirements file for setting up the development environment
+│
+├── reports                      <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures                  <- Generated graphics and figures to be used in reporting
+│
+│
+├── src                          <- Source code for use in this project
+│   ├── __init__.py              <- Makes folder a Python module
 │   │
-│   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
+│   ├── main.py                  <- Main script for orchestrating
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
+│   ├── agents                   <- Directory for different agents
+│   │   ├── __init__.py
+│   │   ├── agent_1.py           <- Agent 1  implementation
+│   │   ├── agent_2.py           <- Agent 2  implementation
+│   │   ├── agent_3.py           <- Agent 3  implementation
 │   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+│   ├── prompts                  <- Directory for prompt scripts
+│   │   ├── __init__.py
+│   │   └── prompt_template.py   <- Example prompt script
+│   │
+│   ├── app                      <- Application directory
+│   │   ├── streamlit_app        <- Streamlit application scripts
+│   │   │   ├── __init__.py
+│   │   │   ├── home.py          <- Homepage for Streamlit app
+│   │   │   └── task_specific.py <- Task-specific Streamlit page
+│   │   └── telegram_bot         <- Telegram bot scripts
+│   │       ├── __init__.py
+│   │       ├── bot_main.py      <- Main script for Telegram bot
+│   │       └── menu_handler.py  <- Script for handling bot menus
+│   │
+│   │
+│   └── visualisation            <- Scripts to create exploratory and results oriented visualisations
+│       ├── __init__.py
+│       └── visualise.py
+
 ```
 
