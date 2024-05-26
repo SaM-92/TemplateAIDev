@@ -88,7 +88,7 @@ Here are some useful make commands available in this project:
 ```make serve_documentation```
 
 
-### Help
+## Help
 For a list of all available make commands, run:
 
 ```make help```
