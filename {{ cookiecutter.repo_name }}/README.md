@@ -129,7 +129,6 @@ The directory structure of the project looks like this:
 │
 ├── config                       <- Configuration files for the project
 │   ├── development.env          <- Environment file for setting environment variables
-│   └── logging.conf             <- Logging configuration
 │
 ├── inputs                       <- Folder for storing input files
 │
