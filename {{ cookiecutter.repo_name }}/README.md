@@ -3,33 +3,96 @@
 {{cookiecutter.description}}
 
 
-You need to create a conda environment
+## Setup Instructions
 
-`` conda create -n your_env_name python=x.x``
+### 1. Create and Activate Conda Environment
 
-Then activate it:
+To set up the project environment, follow these steps:
 
-``conda activate your_env_name``
+1. **Create Conda Environment**
 
-Then you need to intall requirements:
+   Use the `make create_environment` command to create a conda environment:
 
-``pip install -r requirements_dev.txt``
+   ```sh
+   make create_environment
 
-In your terminal do this as well so Python can understand the packages:
+This command will create a new conda environment named after your project with the specified Python version.
 
-``$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"``
+2. ***Activate Conda Environment
 
-## Making Documentation
+Activate the newly created environment:
 
-There is a markdonw file in ``docs/source`` which is called ``model_documentation.md``, in that file you need to specify addresses of your functions to it, so the relevant files can be cerated.
+```sh
+conda activate {{ cookiecutter.project_name }}
+```
 
-Then run this code in the terminal from the main directory:
+### 2. Install Dependencies
+Once the environment is activated, install the required dependencies:
 
-``mkdocs build --config-file docs/mkdocs.yml``
+1. Install Python Dependencies
 
-then go into ``docs`` folder via doing ``cd  .\docs\`` then do this:
+Use the make requirements command to install the required Python packages:
+```make requirements```
 
-``mkdocs serve``
+2. Install Developer Dependencies
+
+If you need to install the developer dependencies as well, use the make dev_requirements command:
+
+```make dev_requirements```
+
+### 3. Set PYTHONPATH
+To ensure Python can understand the packages, set the PYTHONPATH environment variable:
+
+For Windows PowerShell:
+
+```sh
+
+$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"
+```
+For Unix-like systems (bash):
+
+``` export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src"```
+
+
+## Makefile Commands
+
+Here are some useful make commands available in this project:
+
+1. Set up python interpreter environment
+
+```make create_environment```
+
+
+2. Install Python Dependencies
+
+```make requirements```
+
+3. Install Developer Python Dependencies
+
+```make dev_requirements```
+
+
+4. Delete all compiled Python files
+```make clean```
+
+
+5. Process raw data into processed data
+``` make data ```
+
+6. Build documentation
+
+```make build_documentation```
+
+7. Serve documentation
+
+```make serve_documentation```
+
+
+### Help
+For a list of all available make commands, run:
+
+```make help```
+
 
 ## Project structure
 ```
