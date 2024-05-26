@@ -23,8 +23,8 @@ This command will create a new conda environment named after your project with t
 Activate the newly created environment:
 
 ```sh
-conda activate {{ cookiecutter.project_name }}
-```
+conda activate {{ cookiecutter.project_name }}```
+
 
 ### 2. Install Dependencies
 Once the environment is activated, install the required dependencies:
@@ -32,7 +32,9 @@ Once the environment is activated, install the required dependencies:
 1. Install Python Dependencies
 
 Use the make requirements command to install the required Python packages:
-```make requirements```
+
+```sh 
+make requirements```
 
 2. Install Developer Dependencies
 
