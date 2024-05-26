@@ -2,7 +2,6 @@
 
 {{cookiecutter.description}}
 
-
 ## Setup Instructions
 
 ### 1. Create and Activate Conda Environment
@@ -15,10 +14,11 @@ To set up the project environment, follow these steps:
 
    ```sh
    make create_environment
+   ```
 
 This command will create a new conda environment named after your project with the specified Python version.
 
-2. ***Activate Conda Environment
+2. \*\*\*Activate Conda Environment
 
 Activate the newly created environment:
 
@@ -27,13 +27,14 @@ Activate the newly created environment:
 ```
 
 ### 2. Install Dependencies
+
 Once the environment is activated, install the required dependencies:
 
 1. Install Python Dependencies
 
 Use the make requirements command to install the required Python packages:
 
-```sh 
+```sh
 make requirements
 ```
 
@@ -46,6 +47,7 @@ make dev_requirements
 ```
 
 ### 3. Set PYTHONPATH
+
 To ensure Python can understand the packages, set the PYTHONPATH environment variable:
 
 For Windows PowerShell:
@@ -54,13 +56,11 @@ For Windows PowerShell:
 $Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"
 ```
 
-
 For Unix-like systems (bash):
 
 ```sh
  export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src"
 ```
-
 
 ## Makefile Commands
 
@@ -68,31 +68,30 @@ Here are some useful make commands available in this project:
 
 1. Set up python interpreter environment
 
-```sh 
+```sh
 make create_environment
 ```
 
-
 2. Install Python Dependencies
 
-```sh 
+```sh
 make requirements
 ```
 
 3. Install Developer Python Dependencies
 
-```sh 
+```sh
 make dev_requirements
 ```
 
-
 4. Delete all compiled Python files
+
 ```sh
 make clean
 ```
 
-
 6. Process raw data into processed data
+
 ```sh
  make data
 ```
@@ -109,16 +108,16 @@ make build_documentation
 make serve_documentation
 ```
 
-
 ## Help
+
 For a list of all available make commands, run:
 
-```sh 
+```sh
 make help
 ```
 
-
 ## Project structure
+
 ```
 The directory structure of the project looks like this:
 
@@ -155,12 +154,14 @@ The directory structure of the project looks like this:
 ├── src                          <- Source code for use in this project
 │   ├── __init__.py              <- Makes folder a Python module
 │   │
+│   ├── main.py                  <- Main script for orchestrating
+│   │
 │   ├── agents                   <- Directory for different agents
 │   │   ├── __init__.py
 │   │   ├── agent_1.py           <- Agent 1  implementation
 │   │   ├── agent_2.py           <- Agent 2  implementation
 │   │   ├── agent_3.py           <- Agent 3  implementation
-│   │  
+│   │
 │   │
 │   ├── prompts                  <- Directory for prompt scripts
 │   │   ├── __init__.py
