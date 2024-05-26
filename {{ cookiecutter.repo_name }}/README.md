@@ -22,8 +22,9 @@ This command will create a new conda environment named after your project with t
 
 Activate the newly created environment:
 
-```conda activate {{ cookiecutter.project_name }}```
-
+```sh
+   conda activate {{ cookiecutter.project_name }}
+```
 
 ### 2. Install Dependencies
 Once the environment is activated, install the required dependencies:
@@ -32,25 +33,33 @@ Once the environment is activated, install the required dependencies:
 
 Use the make requirements command to install the required Python packages:
 
-```make requirements```
+```sh 
+make requirements
+```
 
 2. Install Developer Dependencies
 
 If you need to install the developer dependencies as well, use the make dev_requirements command:
 
-```make dev_requirements```
+```sh
+make dev_requirements
+```
 
 ### 3. Set PYTHONPATH
 To ensure Python can understand the packages, set the PYTHONPATH environment variable:
 
 For Windows PowerShell:
 
-```$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src" ```
+```sh
+$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"
+```
 
 
 For Unix-like systems (bash):
 
-``` export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src" ```
+```sh
+ export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src"
+```
 
 
 ## Makefile Commands
@@ -59,38 +68,54 @@ Here are some useful make commands available in this project:
 
 1. Set up python interpreter environment
 
-```make create_environment```
+```sh 
+make create_environment
+```
 
 
 2. Install Python Dependencies
 
-```make requirements```
+```sh 
+make requirements
+```
 
 3. Install Developer Python Dependencies
 
-```make dev_requirements```
+```sh 
+make dev_requirements
+```
 
 
 4. Delete all compiled Python files
-```make clean```
+```sh
+make clean
+```
 
 
-5. Process raw data into processed data
-``` make data ```
+6. Process raw data into processed data
+```sh
+ make data
+```
 
-6. Build documentation
+8. Build documentation
 
-```make build_documentation```
+```sh
+make build_documentation
+```
 
 7. Serve documentation
 
-```make serve_documentation```
+```sh
+make serve_documentation
+```
 
 
 ## Help
 For a list of all available make commands, run:
 
-```make help```
+```sh 
+make help
+```
 
 
 ## Project structure
