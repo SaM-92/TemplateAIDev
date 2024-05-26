@@ -22,8 +22,7 @@ This command will create a new conda environment named after your project with t
 
 Activate the newly created environment:
 
-```sh
-conda activate {{ cookiecutter.project_name }}```
+```conda activate {{ cookiecutter.project_name }}```
 
 
 ### 2. Install Dependencies
@@ -33,8 +32,7 @@ Once the environment is activated, install the required dependencies:
 
 Use the make requirements command to install the required Python packages:
 
-```sh 
-make requirements```
+```make requirements```
 
 2. Install Developer Dependencies
 
@@ -47,13 +45,12 @@ To ensure Python can understand the packages, set the PYTHONPATH environment var
 
 For Windows PowerShell:
 
-```sh
+```$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src" ```
 
-$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"
-```
+
 For Unix-like systems (bash):
 
-``` export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src"```
+``` export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src" ```
 
 
 ## Makefile Commands
