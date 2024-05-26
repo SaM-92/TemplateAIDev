@@ -26,34 +26,124 @@ Then specify the required names.
 
 Then go to that file directory the do the below:
 
-You need to create a conda environment
 
-`` conda create -n your_env_name python=x.x``
+## Setup Instructions
 
-Then activate it:
+### 1. Create and Activate Conda Environment
 
-``conda activate your_env_name``
+To set up the project environment, follow these steps:
 
-Then you need to intall requirements:
+1. **Create Conda Environment**
 
-``pip install -r requirements_dev.txt``
+   Use the `make create_environment` command to create a conda environment:
 
-In your terminal do this as well so Python can understand the packages: 
+   ```sh
+   make create_environment
+   ```
 
-``$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"``
+This command will create a new conda environment named after your project with the specified Python version.
+
+2. \*\*\*Activate Conda Environment
+
+Activate the newly created environment:
+
+```sh
+   conda activate {{ cookiecutter.project_name }}
+```
+
+### 2. Install Dependencies
+
+Once the environment is activated, install the required dependencies:
+
+1. Install Python Dependencies
+
+Use the make requirements command to install the required Python packages:
+
+```sh
+make requirements
+```
+
+2. Install Developer Dependencies
+
+If you need to install the developer dependencies as well, use the make dev_requirements command:
+
+```sh
+make dev_requirements
+```
+
+### 3. Set PYTHONPATH
+
+To ensure Python can understand the packages, set the PYTHONPATH environment variable:
+
+For Windows PowerShell:
+
+```sh
+$Env:PYTHONPATH += ";C:\path\to\{{ cookiecutter.repo_name }}\src"
+```
+
+For Unix-like systems (bash):
+
+```sh
+ export PYTHONPATH="$PYTHONPATH:/path/to/{{ cookiecutter.repo_name }}/src"
+```
+
+## Makefile Commands
+
+Here are some useful make commands available in this project:
+
+1. Set up python interpreter environment
+
+```sh
+make create_environment
+```
+
+2. Install Python Dependencies
+
+```sh
+make requirements
+```
+
+3. Install Developer Python Dependencies
+
+```sh
+make dev_requirements
+```
+
+4. Delete all compiled Python files
+
+```sh
+make clean
+```
+
+6. Process raw data into processed data
+
+```sh
+ make data
+```
+
+8. Build documentation
+
+```sh
+make build_documentation
+```
+
+7. Serve documentation
+
+```sh
+make serve_documentation
+```
+
+## Help
+
+For a list of all available make commands, run:
+
+```sh
+make help
+```
 
 
-## Making Documentation
 
-There is a markdonw file in ``docs/source`` which is called ``model_documentation.md``, in that file you need to specify addresses of your functions to it, so the relevant files can be cerated. 
 
-Then run this code in the terminal from the main directory: 
-
-``mkdocs build --config-file docs/mkdocs.yml``
-
-then go into ``docs`` folder via doing ``cd  .\docs\`` then do this: 
-
-``mkdocs serve``
 
 
 ### The resulting directory structure
